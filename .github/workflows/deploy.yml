@@ -24,7 +24,7 @@ jobs:
  
       - name: Build frontend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest ./front_Despacho
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest ./front_despacho
 
       - name: Push frontend
         run: |
