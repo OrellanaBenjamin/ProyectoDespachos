@@ -24,24 +24,24 @@ jobs:
  
       - name: Build frontend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/front_despacho:latest ./frontend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest ./Front_Despacho
 
       - name: Push frontend
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/front_despacho:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest
 
       - name: Build backend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Despachos_SpringBoot:latest ./backend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Despachos_SpringBoot:latest ./Back-Despachos_SpringBoot
 
       - name: Push backend
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Despachos_SpringBoot:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/back-Despachos_SpringBoot:latest
 
       - name: Build backendend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Ventas_SpringBoot:latest ./backend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Ventas_SpringBoot:latest ./Back-Ventas_SpringBoot
 
       - name: Push backendend
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Ventas_SpringBoot:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/back-Ventas_SpringBoot:latest
