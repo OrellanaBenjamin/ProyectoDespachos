@@ -24,7 +24,7 @@ jobs:
  
       - name: Build frontend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest ./Front_Despacho
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/front_despacho:latest ./front_Despacho
 
       - name: Push frontend
         run: |
@@ -32,7 +32,7 @@ jobs:
 
       - name: Build backend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Despachos_SpringBoot:latest ./Back-Despachos_SpringBoot
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Despachos_SpringBoot:latest ./back-Despachos_SpringBoot
 
       - name: Push backend
         run: |
@@ -40,7 +40,7 @@ jobs:
 
       - name: Build backendend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Ventas_SpringBoot:latest ./Back-Ventas_SpringBoot
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/back-Ventas_SpringBoot:latest ./back-Ventas_SpringBoot
 
       - name: Push backendend
         run: |
