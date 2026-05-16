@@ -24,19 +24,24 @@ jobs:
  
       - name: Build frontend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos-frontend:latest ./frontend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/front_despacho:latest ./frontend
 
       - name: Push frontend
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos-frontend:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/front_despacho:latest
 
       - name: Build backend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos-backend:latest ./backend
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Despachos_SpringBoot:latest ./backend
 
       - name: Push backend
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos-backend:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Despachos_SpringBoot:latest
 
-          
-          
+      - name: Build backendend
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Ventas_SpringBoot:latest ./backend
+
+      - name: Push backendend
+        run: |
+          docker push ${{ secrets.DOCKER_USERNAME }}/proyectodespachos/back-Ventas_SpringBoot:latest
