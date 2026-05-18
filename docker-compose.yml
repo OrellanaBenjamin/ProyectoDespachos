@@ -24,7 +24,8 @@ services:
       retries: 5
 
   backend_despachos:
-    build: ./back-Despachos_SpringBoot
+    build: ./back-Despachos_SpringBoot/Springboot-API-REST-DESPACHO
+
 
     container_name: backend_despachos
 
@@ -41,7 +42,7 @@ services:
         condition: service_healthy
 
   backend_ventas:
-    build: ./back-Ventas_SpringBoot
+    build: ./back-Ventas_SpringBoot/Springboot-API-REST
 
     container_name: backend_ventas
 
