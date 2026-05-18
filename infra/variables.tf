@@ -15,7 +15,7 @@ variable "ami_id" {
 
 variable "key_name" {
   description = "Nombre de tu par de claves (.pem) de AWS"
-  default     = "vockey" 
+  default     = "devemoh" 
 }
  
 variable "key_pair_name" {}
